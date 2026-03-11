@@ -198,7 +198,7 @@ export default async function ProductDetailPage({
       </main>
 
       {/* Sticky Bottom CTA */}
-      <AddToCartButton price={product.price} />
+      <AddToCartButton price={product.price} productName={product.name} />
     </div>
   );
 }

@@ -5,13 +5,20 @@ import MaterialIcon from "@/components/ui/MaterialIcon";
 
 interface AddToCartButtonProps {
   price: number;
+  productName: string;
 }
 
-export default function AddToCartButton({ price }: AddToCartButtonProps) {
+export default function AddToCartButton({
+  price,
+  productName,
+}: AddToCartButtonProps) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
 
   const handleAdd = () => {
+    const message = `Halo Flora Jaya, saya tertarik dengan produk *${productName}* seharga *Rp ${price.toLocaleString("id-ID")}*. Apakah masih tersedia?`;
+    const url = `https://wa.me/6281278668889?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };
