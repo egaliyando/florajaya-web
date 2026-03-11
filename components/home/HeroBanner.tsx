@@ -1,32 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-const heroImages = ["/hero1.png", "/hero2.png"];
 
 export default function HeroBanner() {
-  const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % heroImages.length);
-        setVisible(true);
-      }, 600);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="p-4 sm:p-6">
       <div
         className="flex min-h-130 flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center shadow-xl transition-all duration-600"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("${heroImages[current]}")`,
-          opacity: visible ? 1 : 0,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("/hero2.png")`,
           transition: "opacity 0.6s ease-in-out",
         }}
         role="img"
