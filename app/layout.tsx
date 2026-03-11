@@ -9,7 +9,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Flora Jaya - Segarkan Ruanganmu",
+  title: "Flora Jaya - Bibit tanaman berkualitas",
   description:
     "Bawa keindahan alam ke dalam rumah Anda dengan koleksi tanaman hias terbaik dari Flora Jaya. Tanaman indoor, outdoor, kaktus, sukulen, dan perlengkapan berkebun.",
   keywords: [

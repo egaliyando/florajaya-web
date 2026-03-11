@@ -8,7 +8,7 @@ interface FeaturedSectionProps {
 
 export default function FeaturedSection({ products }: FeaturedSectionProps) {
   return (
-    <div className="px-4 pt-8">
+    <div className="px-4 pt-4">
       <div className="flex items-center justify-between pb-5">
         <h2 className="text-slate-900 text-2xl font-bold tracking-tight font-display">
           Koleksi Terpopuler

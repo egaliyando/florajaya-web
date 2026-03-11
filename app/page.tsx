@@ -17,9 +17,6 @@ export default function HomePage() {
         {/* Hero Section */}
         <HeroBanner />
 
-        {/* Categories / Quick Filter */}
-        <CategoryFilter categories={homeCategories} variant="home" />
-
         {/* Featured Products */}
         <FeaturedSection products={featuredProducts} />
       </main>
